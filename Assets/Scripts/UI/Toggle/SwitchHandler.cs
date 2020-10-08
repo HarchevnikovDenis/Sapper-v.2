@@ -7,8 +7,6 @@ public abstract class SwitchHandler : MonoBehaviour
 {
     [SerializeField] protected Transform switchButton;
     [SerializeField] protected RawImage backgroundImage;
-    [SerializeField] protected Color enableColor;
-    [SerializeField] protected Color disableColor;
     
     protected bool canClick
     {
@@ -22,6 +20,6 @@ public abstract class SwitchHandler : MonoBehaviour
     {
         if(!canClick) return;
 
-        switchButton.DOLocalMoveX(-switchButton.localPosition.x, 0.2f);
+        switchButton.DOLocalMoveX(-switchButton.localPosition.x, 0.25f);
     }
 }

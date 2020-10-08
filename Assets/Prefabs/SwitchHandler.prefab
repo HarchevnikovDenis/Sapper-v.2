@@ -190,13 +190,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 2996632654653626322}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 94d4f3ef0cc80fd4e87ef1fcc3ad92ff, type: 3}
+  m_Script: {fileID: 11500000, guid: 08386279a30c27649a5c3308886da1c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   switchButton: {fileID: 2996632654108825885}
   backgroundImage: {fileID: 2996632653760130034}
-  enableColor: {r: 0.3757802, g: 0.8490566, b: 0.22828408, a: 1}
-  disableColor: {r: 1, g: 0.21226418, b: 0.21226418, a: 1}
+  enableColor: {r: 0.52328455, g: 0.9339623, b: 0.3480331, a: 1}
+  disableColor: {r: 0.9528302, g: 0.28315237, b: 0.28315237, a: 1}
 --- !u!114 &2996632654653626324
 MonoBehaviour:
   m_ObjectHideFlags: 0

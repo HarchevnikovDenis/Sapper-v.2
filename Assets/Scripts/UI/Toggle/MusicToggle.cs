@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class MusicToggle : SwitchHandler
 {
+    [SerializeField] private Color enableColor;
+    [SerializeField] private Color disableColor;
+
     public bool isActive
     {
         get
