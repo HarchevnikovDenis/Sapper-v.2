@@ -1364,6 +1364,7 @@ GameObject:
   - component: {fileID: 2093729679}
   - component: {fileID: 2093729680}
   - component: {fileID: 2093729681}
+  - component: {fileID: 2093729682}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -1446,6 +1447,27 @@ MonoBehaviour:
   sapperFieldManager: {fileID: 2093729680}
   winPanel: {fileID: 777893740}
   lostPanel: {fileID: 1657137770}
+--- !u!114 &2093729682
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2093729676}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c7add0ce57e0574da90aba74c671c77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  boomEffect: {fileID: 7173247245643191557, guid: 307075c6244d73f4ab64c8b90f40f9be,
+    type: 3}
+  openCellColor: {r: 0.6981132, g: 0.6981132, b: 0.6981132, a: 0.6862745}
+  openMineColor: {r: 0.9339623, g: 0.3039783, b: 0.3039783, a: 0.6862745}
+  color_0: {r: 1, g: 1, b: 1, a: 0}
+  color_1: {r: 0, g: 0, b: 1, a: 1}
+  color_2: {r: 0, g: 0.48235297, b: 0, a: 1}
+  color_3: {r: 1, g: 0, b: 0, a: 1}
+  color_4: {r: 0, g: 0, b: 0.4156863, a: 1}
 --- !u!1 &2129758634
 GameObject:
   m_ObjectHideFlags: 0

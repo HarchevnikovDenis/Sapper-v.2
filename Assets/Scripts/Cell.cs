@@ -6,12 +6,10 @@ public class Cell : MonoBehaviour
     [SerializeField] private TextMeshProUGUI cellStatus;
     [SerializeField] private GameObject flagImage;
     [SerializeField] private GameObject bombImage;
-    [SerializeField] private GameObject boomEffect;
-    [SerializeField] private Color openCellColor;
-    [SerializeField] private Color openMineColor;
     [SerializeField] private SpriteRenderer spriteRenderer;
-    [SerializeField] private Color color_0, color_1, color_2, color_3, color_4;
-    private Color startColor;
+
+    private CellColorManager cellColorManager => CellColorManager.Instance;
+
     public string CellStatus
     {
         get
@@ -27,27 +25,22 @@ public class Cell : MonoBehaviour
     public bool isOpened { get; set;}
     public bool isChecked { get; set;}
 
-    private void Start()
-    {
-        startColor = spriteRenderer.color;
-    }
-
     public void OpenCell()
     {
         if(isOpened)
         {
-            spriteRenderer.color = openCellColor;
+            spriteRenderer.color = cellColorManager.OpenCellColor;
             cellStatus.gameObject.SetActive(true);
         }
     }
 
     public void OpenMine()
     {
-        if(!isChecked) spriteRenderer.color = openMineColor;
+        if(!isChecked) spriteRenderer.color = cellColorManager.OpenMineColor;
         
         cellStatus.gameObject.SetActive(true);
         bombImage.SetActive(true);
-        boomEffect.SetActive(true);
+        Instantiate(cellColorManager.BoomEffect, transform.position, Quaternion.identity);
     }
 
     public void SetFlag()
@@ -67,19 +60,19 @@ public class Cell : MonoBehaviour
         switch (CellStatus)
         {
             case "0":
-                cellStatus.color = color_0;
+                cellStatus.color = cellColorManager.Color_0;
                 break;
             case "1":
-                cellStatus.color = color_1;
+                cellStatus.color = cellColorManager.Color_1;
                 break;
              case "2":
-                cellStatus.color = color_2;
+                cellStatus.color = cellColorManager.Color_2;
                 break;
             case "3":
-                cellStatus.color = color_3;
+                cellStatus.color = cellColorManager.Color_3;
                 break;
             case "4":
-                cellStatus.color = color_4;
+                cellStatus.color = cellColorManager.Color_4;
                 break;   
         }
     }
