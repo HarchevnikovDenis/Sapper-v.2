@@ -6,6 +6,7 @@ public class Cell : MonoBehaviour
     [SerializeField] private TextMeshProUGUI cellStatus;
     [SerializeField] private GameObject flagImage;
     [SerializeField] private GameObject bombImage;
+    [SerializeField] private GameObject boomEffect;
     [SerializeField] private Color openCellColor;
     [SerializeField] private Color openMineColor;
     [SerializeField] private SpriteRenderer spriteRenderer;
@@ -43,8 +44,10 @@ public class Cell : MonoBehaviour
     public void OpenMine()
     {
         if(!isChecked) spriteRenderer.color = openMineColor;
+        
         cellStatus.gameObject.SetActive(true);
         bombImage.SetActive(true);
+        boomEffect.SetActive(true);
     }
 
     public void SetFlag()
