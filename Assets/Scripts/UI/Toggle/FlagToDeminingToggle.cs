@@ -1,8 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public class FlagToDeminingToggle : SwitchHandler
+﻿public class FlagToDeminingToggle : SwitchHandler
 {
     public bool isFlagSelected { get; set;}
 

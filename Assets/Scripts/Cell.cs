@@ -1,15 +1,13 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
+﻿using UnityEngine;
 using TMPro;
 
 public class Cell : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI cellStatus;
+    [SerializeField] private GameObject flagImage;
+    [SerializeField] private GameObject bombImage;
     [SerializeField] private Color openCellColor;
     [SerializeField] private Color openMineColor;
-    [SerializeField] private Color checkColor;
     [SerializeField] private SpriteRenderer spriteRenderer;
     [SerializeField] private Color color_0, color_1, color_2, color_3, color_4;
     private Color startColor;
@@ -46,17 +44,18 @@ public class Cell : MonoBehaviour
     {
         if(!isChecked) spriteRenderer.color = openMineColor;
         cellStatus.gameObject.SetActive(true);
+        bombImage.SetActive(true);
     }
 
     public void SetFlag()
     {
-        spriteRenderer.color = checkColor;
+        flagImage.SetActive(true);
         isChecked = true;
     }
 
     public void ResetFlag()
     {
-        spriteRenderer.color = startColor;
+        flagImage.SetActive(false);
         isChecked = false;
     }
 
